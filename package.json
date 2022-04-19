@@ -1,0 +1,25 @@
+{
+  "name": "qa-node",
+  "version": "1.0.0",
+  "description": "QA system web api server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "QA",
+    "API",
+    "node"
+  ],
+  "author": "JHV000",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-jwt": "^6.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "node-nlp": "^4.23.4",
+    "socket.io": "^4.4.1"
+  }
+}

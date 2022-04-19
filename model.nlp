@@ -1,0 +1,307 @@
+{
+  "settings": {
+    "languages": [
+      "zh"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "zh"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "zh": {
+        "settings": {
+          "locale": "zh",
+          "trainByDomain": false,
+          "tag": "domain-manager-zh",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "ma3,shang4,wo3,yao1,yao4,zou3": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bai2,bai4,bai5": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "jian4,zai4": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bi4,wo3,xu1,zou3": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "ci4,jian4,xia4,xian4": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greetings.bye": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "我马上要走了",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "拜拜",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "再见",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "我必须走了",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "下次见",
+            "intent": "greetings.bye"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "zh",
+              "tag": "nlu-zh",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "wo3": 1,
+              "ma3": 1,
+              "shang4": 1,
+              "yao1": 1,
+              "yao4": 1,
+              "zou3": 1,
+              "bai2": 1,
+              "bai4": 1,
+              "bai5": 1,
+              "zai4": 1,
+              "jian4": 1,
+              "bi4": 1,
+              "xu1": 1,
+              "xia4": 1,
+              "ci4": 1,
+              "xian4": 1
+            },
+            "intents": {
+              "greetings.bye": 1
+            },
+            "intentFeatures": {
+              "greetings.bye": {
+                "wo3": 1,
+                "ma3": 1,
+                "shang4": 1,
+                "yao1": 1,
+                "yao4": 1,
+                "zou3": 1,
+                "bai2": 1,
+                "bai4": 1,
+                "bai5": 1,
+                "zai4": 1,
+                "jian4": 1,
+                "bi4": 1,
+                "xu1": 1,
+                "xia4": 1,
+                "ci4": 1,
+                "xian4": 1
+              }
+            },
+            "featuresToIntent": {
+              "wo3": [
+                "greetings.bye"
+              ],
+              "ma3": [
+                "greetings.bye"
+              ],
+              "shang4": [
+                "greetings.bye"
+              ],
+              "yao1": [
+                "greetings.bye"
+              ],
+              "yao4": [
+                "greetings.bye"
+              ],
+              "zou3": [
+                "greetings.bye"
+              ],
+              "bai2": [
+                "greetings.bye"
+              ],
+              "bai4": [
+                "greetings.bye"
+              ],
+              "bai5": [
+                "greetings.bye"
+              ],
+              "zai4": [
+                "greetings.bye"
+              ],
+              "jian4": [
+                "greetings.bye"
+              ],
+              "bi4": [
+                "greetings.bye"
+              ],
+              "xu1": [
+                "greetings.bye"
+              ],
+              "xia4": [
+                "greetings.bye"
+              ],
+              "ci4": [
+                "greetings.bye"
+              ],
+              "xian4": [
+                "greetings.bye"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "zh",
+                "tag": "nlu-zh",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "wo3",
+                "ma3",
+                "shang4",
+                "yao1",
+                "yao4",
+                "zou3",
+                "bai2",
+                "bai4",
+                "bai5",
+                "zai4",
+                "jian4",
+                "bi4",
+                "xu1",
+                "xia4",
+                "ci4",
+                "xian4"
+              ],
+              "intents": [
+                "greetings.bye"
+              ],
+              "perceptrons": [
+                [
+                  2.67990779876709,
+                  0.8936502933502197,
+                  0.8936502933502197,
+                  0.8936502933502197,
+                  0.8936502933502197,
+                  2.67990779876709,
+                  2.984621047973633,
+                  2.984621047973633,
+                  2.984621047973633,
+                  3.728952169418335,
+                  5.048681259155273,
+                  1.786909818649292,
+                  1.786909818649292,
+                  1.308739423751831,
+                  1.308739423751831,
+                  1.308739423751831,
+                  5.355043595309383
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "zh",
+        "我马上要走了"
+      ],
+      [
+        "zh",
+        "拜拜"
+      ],
+      [
+        "zh",
+        "再见"
+      ],
+      [
+        "zh",
+        "我必须走了"
+      ],
+      [
+        "zh",
+        "下次见"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "zh": {
+        "greetings.bye": [
+          {
+            "answer": "好的，再见"
+          },
+          {
+            "answer": "那拜拜喽！"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
